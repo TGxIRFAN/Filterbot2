@@ -244,12 +244,10 @@ This module only works for my admins
 Group = {}(<code>{}</code>)
 Total Members = <code>{}</code>
 Added By - {}
-VIJAYTHALAPATHY BOT
 """
     LOG_TEXT_P = """#NewUser
 ID - <code>{}</code>
 Name - {}
-VIJAYATHALAPATHY BOT
 """
     FILE_MSG = """
 <b>Hai 👋 {} </b>😍
