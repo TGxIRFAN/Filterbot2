@@ -16,8 +16,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/matrixbotz0/PETER-PARKER-BOT",
-    "repository": "https://github.com/matrixbotz0/PETER-PARKER-BOT",
+    "website": "https://github.c",
+    "repository": "https://github.com/alappu900/Filterbot1",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
