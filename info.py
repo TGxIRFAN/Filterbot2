@@ -111,8 +111,8 @@ AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CUSTOM_FILE_CAPTION}")
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "📂Fɪʟᴇɴᴀᴍᴇ : {file_name}\n\n╔═════•✧❅✦❅✧•═════╗\n▣ <a href='https://t.me/filesharebotusers'> **AML UPDATES** </a>\n╚═════•✧❅✦❅✧•═════╝\n\n **JOIN, SHARE & SUPPORT**")
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", None)
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", """<b>⍞ 𝗧𝗶𝘁𝗹𝗲 : <a href={url}>{title}</a>
 〄 𝗥𝗲𝗹𝗲𝗮𝘀𝗲𝗱 : {runtime} min | <a href={url}/releaseinfo>{year}</a>
 
