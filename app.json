@@ -17,7 +17,7 @@
       "inline"
     ],
     "website": "https://github.c",
-    "repository": "https://github.com/alappu900/Filterbot1",
+    "repository": "https://github.com/alappu280/Filterbot1",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
