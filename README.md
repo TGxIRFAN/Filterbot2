@@ -54,7 +54,7 @@
 
 ## Deploy to Heroku 
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/alappu900/Filterbot1)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/alappu280/Filterbot1)
 
 ## Deploy to Render
 
