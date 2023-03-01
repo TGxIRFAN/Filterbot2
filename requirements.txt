@@ -35,3 +35,4 @@ aiohttp
 python-math
 Pillow
 speedtest-cli
+psutil==5.9.4
