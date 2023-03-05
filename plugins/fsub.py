@@ -7,8 +7,8 @@ from pyrogram import Client, enums
 from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
-
-from info import REQ_CHANNEL, AUTH_CHANNEL, ADMINS
+from database.join_reqs import JoinReqs
+from info import REQ_CHANNEL, AUTH_CHANNEL, JOIN_REQS_DB, ADMINS
 
 from logging import getLogger
 
