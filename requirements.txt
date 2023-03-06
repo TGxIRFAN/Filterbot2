@@ -33,6 +33,7 @@ pytz
 dnspython
 aiohttp
 python-math
+python-dotenv
 Pillow
 speedtest-cli
 psutil==5.9.4
