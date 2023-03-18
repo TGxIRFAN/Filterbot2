@@ -25,20 +25,20 @@ class script(object):
 • ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href=https://t.me/TGxIRFAN>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>"""
     
    
-    MANUELFILTER_TXT = """Help: <b>Filters</b>
+    MANUELFILTER_TXT = """𝙷𝚎𝚕𝚙: <b>𝙵𝚒𝚕𝚝𝚎𝚛𝚜</b>
 
 <b>- 𝙵𝙸𝙻𝚃𝙴𝚁 𝙸𝚂 𝚃𝙷𝙴 𝙵𝙴𝙰𝚃𝚄𝚁𝙴 𝚆𝙴𝚁𝙴 𝚄𝚂𝙴𝚁𝚂 𝙲𝙰𝙽 𝚂𝙴𝚃 𝙰𝚄𝚃𝙾𝙼𝙰𝚃𝙴𝙳 𝚁𝙴𝙿𝙻𝙸𝙴𝚂 𝙵𝙾𝚁 𝙰 𝙿𝙰𝚁𝚃𝙸𝙲𝚄𝙻𝙰𝚁 𝙺𝙴𝚈𝚆𝙾𝚁𝙳 𝙰𝙽𝙳 𝙴𝙻𝚂𝙰 𝚆𝙸𝙻𝙻 𝚁𝙴𝚂𝙿𝙾𝙽𝙳 𝚆𝙷𝙴𝙽𝙴𝚅𝙴𝚁 𝙰 𝙺𝙴𝚈𝚆𝙾𝚁𝙳 𝙸𝚂 𝙵𝙾𝚄𝙽𝙳 𝚃𝙷𝙴 𝙼𝙴𝚂𝚂𝙰𝙶𝙴</b>
 
-<b>NOTE:</b>
+<b>𝙽𝙾𝚃𝙴:</b>
 <b>𝟷. 𝚃𝙷𝙸𝚂 𝙱𝙾𝚃 𝚂𝙷𝙾𝚄𝙻𝙳 𝙷𝙰𝚅𝙴 𝙰𝙳𝙼𝙸𝙽 𝙿𝚁𝙸𝚅𝙸𝙻𝙻𝙰𝙶𝙴.
 𝟸. 𝙾𝙽𝙻𝚈 𝙰𝙳𝙼𝙸𝙽𝚂 𝙲𝙰𝙽 𝙰𝙳𝙳 𝙵𝙸𝙻𝚃𝙴𝚁𝚂 𝙸𝙽 𝙰 𝙲𝙷𝙰𝚃.
-𝟹. 𝙰𝙻𝙴𝚁𝚃 𝙱𝚄𝚃𝚃𝙾𝙽𝚂 𝙷𝙰𝚅𝙴 𝙰 𝙻𝙸𝙼𝙸𝚃 𝙾𝙵 𝟼𝟺 𝙲𝙷𝙰𝚁𝙰𝙲𝚃𝙴𝚁𝚂.</b>
+𝟹. 𝙰𝙻𝙴𝚁𝚃 𝙱𝚄𝚃𝚃𝙾𝙽𝚂 𝙷𝙰𝚅𝙴 𝙰 𝙻𝙸𝙼𝙸𝚃 𝙾𝙵 𝟼𝟺 𝙲𝙷𝙰𝚁𝙰𝙲𝚃𝙴𝚁𝚂.
 
-<b>Commands and Usage:</b>
-• /filter - <code>add a filter in chat</code>
-• /filters - <code>list all the filters of a chat</code>
-• /del - <code>delete a specific filter in chat</code>
-• /delall - <code>delete the whole filters in a chat (chat owner only)</code>"""
+𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜 𝚊𝚗𝚍 𝚄𝚜𝚊𝚐𝚎:
+• /𝚏𝚒𝚕𝚝𝚎𝚛 - 𝚊𝚍𝚍 𝚊 𝚏𝚒𝚕𝚝𝚎𝚛 𝚒𝚗 𝚌𝚑𝚊𝚝
+• /𝚏𝚒𝚕𝚝𝚎𝚛𝚜 - 𝚕𝚒𝚜𝚝 𝚊𝚕𝚕 𝚝𝚑𝚎 𝚏𝚒𝚕𝚝𝚎𝚛𝚜 𝚘𝚏 𝚊 𝚌𝚑𝚊𝚝
+• /𝚍𝚎𝚕 - 𝚍𝚎𝚕𝚎𝚝𝚎 𝚊 𝚜𝚙𝚎𝚌𝚒𝚏𝚒𝚌 𝚏𝚒𝚕𝚝𝚎𝚛 𝚒𝚗 𝚌𝚑𝚊𝚝
+• /𝚍𝚎𝚕𝚊𝚕𝚕 - 𝚍𝚎𝚕𝚎𝚝𝚎 𝚝𝚑𝚎 𝚠𝚑𝚘𝚕𝚎 𝚏𝚒𝚕𝚝𝚎𝚛𝚜 𝚒𝚗 𝚊 𝚌𝚑𝚊𝚝 (𝚌𝚑𝚊𝚝 𝚘𝚠𝚗𝚎𝚛 𝚘𝚗𝚕𝚢)"""
 
     BUTTON_TXT = """Help: <b>Buttons</b>
 
