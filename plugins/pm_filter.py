@@ -494,9 +494,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 caption=f_caption,
                 protect_content=True if ident == "filep" else False,
                 )
-            )
-            return
-        
+            
         try:
             if (AUTH_CHANNEL or REQ_CHANNEL) and not await is_subscribed(client, query):
                 if clicked == typed:
