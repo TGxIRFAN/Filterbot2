@@ -108,13 +108,18 @@ async def give_filter(client,message):
             await auto_filter(client, message)
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
-async def give_filter(client, message):
-    if (AUTH_CHANNEL or REQ_CHANNEL) and not await is_subscribed(client, message):
-        if clicked == typed:
-            await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+async def pm_text(bot, message):
+    if AUTH_CHANNEL and not await is_subscribed(client, message):
+        try:
+            invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
+        except:
             return
-        else:
-            await auto_filter(client, message)
+        btn = [[
+            InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+        ]]
+        await message.reply("**Please Join My Updates Channel to use this Bot!**", reply_markup=InlineKeyboardMarkup(btn))
+    else:
+        await auto_filter(client, message)
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
@@ -500,7 +505,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
             
         try:
-            if (AUTH_CHANNEL or REQ_CHANNEL) and not await is_subscribed(client, query):
+            if REQ_CHANNEL and not await is_subscribed(client, query):
                 if clicked == typed:
                     await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
                     return
@@ -531,7 +536,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         except Exception as e:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
-        if (AUTH_CHANNEL or REQ_CHANNEL) and not await is_subscribed(client, query):
+        if REQ_CHANNEL and not await is_subscribed(client, query):
             await query.answer("𝑰 𝑳𝒊𝒌𝒆 𝒀𝒐𝒖𝒓 𝑺𝒎𝒂𝒓𝒕𝒏𝒆𝒔𝒔, 𝑩𝒖𝒕 𝑫𝒐𝒏'𝒕 𝑩𝒆 𝑶𝒗𝒆𝒓𝒔𝒎𝒂𝒓𝒕 😒", show_alert=True)
             return
         ident, file_id = query.data.split("#")
