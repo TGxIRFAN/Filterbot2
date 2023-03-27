@@ -109,17 +109,12 @@ async def give_filter(client,message):
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def give_filter(client, message):
-    if (AUTH_CHANNEL or REQ_CHANNEL) and not await is_subscribed(client, message):
-        try:
-            invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL or REQ_CHANNEL))
-        except:
+    if (AUTH_CHANNEL or REQ_CHANNEL) and not await is_subscribed(client, query):
+        if clicked == typed:
+            await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
             return
-        btn = [[
-            InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
-        ]]
-        await message.reply("**Please Join My Updates Channel to use this Bot!**", reply_markup=InlineKeyboardMarkup(btn))
-    else:
-        await auto_filter(client, message)
+        else:
+            await auto_filter(client, message)
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
