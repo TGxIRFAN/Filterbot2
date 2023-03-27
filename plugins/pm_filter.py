@@ -109,7 +109,7 @@ async def give_filter(client,message):
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def give_filter(client, message):
-    if (AUTH_CHANNEL or REQ_CHANNEL) and not await is_subscribed(client, query):
+    if (AUTH_CHANNEL or REQ_CHANNEL) and not await is_subscribed(client, message):
         if clicked == typed:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
             return
