@@ -109,9 +109,9 @@ async def give_filter(client,message):
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def give_filter(client, message):
-    if AUTH_CHANNEL and not await is_subscribed(client, message):
+    if (AUTH_CHANNEL or REQ_CHANNEL) and not await is_subscribed(client, message):
         try:
-            invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
+            invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL or REQ_CHANNEL))
         except:
             return
         btn = [[
