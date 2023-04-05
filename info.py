@@ -121,7 +121,7 @@ IMDB = is_enabled((environ.get('IMDB', "True")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "📂Fɪʟᴇɴᴀᴍᴇ : {file_name}\n\n╔═════•✧❅✦❅✧•═════╗\n▣ <a href='https://t.me/filesharebotusers'> **AML UPDATES** </a>\n╚═════•✧❅✦❅✧•═════╝\n\n **JOIN, SHARE & SUPPORT**")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", None)
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🎪 Tɪᴛɪʟᴇ : {search}\n\n┏ 🤴 Asᴋᴇᴅʙʏ : {message.from_user.mention}\n┣⚡ Cʜᴇᴄᴋ Bᴏᴛ Pᴍ: <a href='https://t.me/{temp.U_NAME}'>Cʟɪᴄᴋ Hᴇʀᴇ</a>\n┗🍁 Cʜᴀɴɴᴇʟ : <a href='https://t.me/filesharebotusers'>𝙰𝙼𝙻 𝚄𝙿𝙳𝙰𝚃𝙴𝚂</a>\n\n★ Pᴏᴡᴇʀᴇᴅ ʙʏ : {message.chat.title}"
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🎪 Tɪᴛɪʟᴇ : {search}\n\n┏ 🤴 Asᴋᴇᴅʙʏ : {message.from_user.mention}\n┣⚡ Cʜᴇᴄᴋ Bᴏᴛ Pᴍ: <a href='https://t.me/{temp.U_NAME}'>Cʟɪᴄᴋ Hᴇʀᴇ</a>\n┗🍁 Cʜᴀɴɴᴇʟ : <a href='https://t.me/filesharebotusers'>𝙰𝙼𝙻 𝚄𝙿𝙳𝙰𝚃𝙴𝚂</a>\n\n★ Pᴏᴡᴇʀᴇᴅ ʙʏ : {message.chat.title}")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
