@@ -284,17 +284,14 @@ Name - {}
 """
 
     IMDB_TEMPLATE_TXT = """
-<b>⍞ 𝗧𝗶𝘁𝗹𝗲</b> : <b><i><a href={url}>{title}</a></i></b><b>
+f"🎪 Tɪᴛɪʟᴇ : {search}
 
-⌗ 𝗚𝗲𝗻𝗿𝗲𝘀</b> :<b><i>{genres}</i></b><b>
-★ 𝗥𝗮𝘁𝗶𝗻𝗴</b> : <b><i><a href={url}/ratings>{rating}</a> / 10 (ʙᴀsᴇᴅ ᴏɴ {votes} ᴜsᴇʀ ʀᴀᴛɪɴɢ.)</i></b><b>
+┏ 🤴 Asᴋᴇᴅʙʏ : {message.from_user.mention}
+┗🍁 Cʜᴀɴɴᴇʟ : <a href='https://t.me/Ak_Links1'>Aᴋ Bᴏᴛᴢ</a>
 
-〄 𝗥𝗲𝗹𝗲𝗮𝘀𝗲𝗱</b> : <b><i>{release_date}</i></b><b>
-⌬ 𝗟𝗮𝗻𝗴𝘂𝗮𝗴𝗲𝘀</b> : <b><i>{languages}</i></b><b>
-⛤ 𝗖𝗼𝘂𝗻𝘁𝗿𝗶𝗲𝘀</b> : <b><i>{countries}</i></b><b>
-⎙ 𝗦𝘁𝗼𝗿𝘆 𝗟𝗶𝗻𝗲</b> : <code>{plot}</code><b>
+Nᴏᴛᴇ : Aꜰᴛᴇʀ 10 Mɪɴᴜᴛᴇꜱ Tʜɪꜱ Mᴇꜱꜱᴀɢᴇ Wɪʟʟ Bᴇ Aᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ Dᴇʟᴇᴛᴇᴅ
 
-★Requested by</b> : {message.from_user.mention}
+★ Pᴏᴡᴇʀᴇᴅ ʙʏ : {message.chat.title}
 """
 
     CUSTOM_FILE_CAPTION = """<b>FILE : <code>{file_name}</code>
