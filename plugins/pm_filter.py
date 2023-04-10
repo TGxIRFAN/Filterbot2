@@ -1431,7 +1431,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"🎪 Tɪᴛɪʟᴇ : {search}\n\n┏ 🤴 Asᴋᴇᴅʙʏ : {message.from_user.mention}\n┣⚡ Cʜᴇᴄᴋ Bᴏᴛ Pᴍ: <a href='https://t.me/{temp.U_NAME}'>Cʟɪᴄᴋ Hᴇʀᴇ</a>\n┗🍁 Cʜᴀɴɴᴇʟ : <a href='https://t.me/filesharebotusers'>𝙰𝙼𝙻 𝚄𝙿𝙳𝙰𝚃𝙴𝚂</a>\n\n★ Pᴏᴡᴇʀᴇᴅ ʙʏ : {message.chat.title}"
+        cap = f"<b>Hᴇʏ {message.from_user.mention}, Hᴇʀᴇ ɪs Wʜᴀᴛ I Fᴏᴜɴᴅ Iɴ Mʏ Dᴀᴛᴀʙᴀsᴇ Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}.</b>"
     if imdb and imdb.get('poster'):
         try:
             if message.chat.id == SUPPORT_CHAT_ID:
