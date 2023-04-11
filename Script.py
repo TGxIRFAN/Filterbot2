@@ -1,6 +1,6 @@
 class script(object):
     START_TXT = """<b>𝙷𝙴𝙻𝙻𝙾 {},
-𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, 𝙸 𝙲𝙰𝙽 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙼𝙾𝚅𝙸𝙴𝚂, 𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝙴𝙽𝙹𝙾𝚈</b>\n\n©𝙼𝙰𝙸𝙽𝚃𝙰𝙸𝙽𝙴𝙳 𝙱𝚈: <a href=https://t.me/TGxIRFAN> 𝐀𝐒 𝐓𝐆 [𝐎𝐍𝐋𝐈𝐍𝐄]</a></b>"""
+𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, 𝙸 𝙲𝙰𝙽 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙼𝙾𝚅𝙸𝙴𝚂, 𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝙴𝙽𝙹𝙾𝚈</b>\n\n©𝙼𝙰𝙸𝙽𝚃𝙰𝙸𝙽𝙴𝙳 𝙱𝚈: <a href=https://t.me/BetterProffesor> Proffesor </a></b>"""
     
     HELP_TXT = """<b>𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂.</b>"""
@@ -9,8 +9,8 @@ class script(object):
 # ⚠️ Please don't change our credits 👇🏻
 
     ABOUT_TXT = """<b>✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
-✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/TGxIRFAN>𝙰𝙻 𝙸𝚁𝙵𝙰𝙽</a>
-✯ 𝚄𝙿𝙳𝙰𝚃𝙴𝚂: <a href=https://t.me/filesharebotusers>𝙰𝙼𝙻 𝚄𝙿𝙳𝙰𝚃𝙴𝚂</a>
+✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/BetterProffesor>Suhail</a>
+✯ 𝚄𝙿𝙳𝙰𝚃𝙴𝚂: <a href=https://t.me/BF_Bots>Bot Updates</a>
 ✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: <a href=https://docs.pyrogram.org/>𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼</a>
 ✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: <a href=https://www.python.org/download/releases/3.0/>𝙿𝚈𝚃𝙷𝙾𝙽 𝟹</a>
 ✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: <a href=https://www.mongodb.com/>𝙼𝙾𝙽𝙶𝙾-𝙳𝙱</a>
@@ -20,9 +20,9 @@ class script(object):
     
     OWNERANE_TXT = """<b>⍟───[ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟꜱ ]───⍟
     
-• ꜰᴜʟʟ ɴᴀᴍᴇ : 𝐀𝐒 𝐓𝐆 [𝐎𝐍𝐋𝐈𝐍𝐄]
-• ᴜꜱᴇʀɴᴀᴍᴇ : @TGxIRFAN
-• ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href=https://t.me/TGxIRFAN>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>"""
+• ꜰᴜʟʟ ɴᴀᴍᴇ : Suhail Ebrahim 
+• ᴜꜱᴇʀɴᴀᴍᴇ : @BetterProffesor
+• ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href=https://t.me/BetterProffesor>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>"""
     
    
     MANUELFILTER_TXT = """𝙷𝚎𝚕𝚙: <b>𝙵𝚒𝚕𝚝𝚎𝚛𝚜<b>
