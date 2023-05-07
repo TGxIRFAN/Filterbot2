@@ -59,63 +59,28 @@ async def fil_mod(client, message):
           await m.edit("𝚄𝚂𝙴 :- /autofilter on 𝙾𝚁 /autofilter off")
 
 @Client.on_message((filters.group) & filters.text & filters.incoming)
-async def give_filter(client,message):
-    await global_filters(client, message)
-    group_id = message.chat.id
-    name = message.text
-
-    keywords = await get_filters(group_id)
-    for keyword in reversed(sorted(keywords, key=len)):
-        pattern = r"( |^|[^\w])" + re.escape(keyword) + r"( |$|[^\w])"
-        if re.search(pattern, name, flags=re.IGNORECASE):
-            reply_text, btn, alert, fileid = await find_filter(group_id, keyword)
-
-            if reply_text:
-                reply_text = reply_text.replace("\\n", "\n").replace("\\t", "\t")
-
-            if btn is not None:
+async def give_filter(client, message):
+    if message.chat.id != SUPPORT_CHAT_ID:
+        glob = await global_filters(client, message)
+        if glob == False:
+            manual = await manual_filters(client, message)
+            if manual == False:
+                settings = await get_settings(message.chat.id)
                 try:
-                    if fileid == "None":
-                        if btn == "[]":
-                            await message.reply_text(reply_text, disable_web_page_preview=True)
-                        else:
-                            button = eval(btn)
-                            await message.reply_text(
-                                reply_text,
-                                disable_web_page_preview=True,
-                                reply_markup=InlineKeyboardMarkup(button)
-                            )
-                    elif btn == "[]":
-                        await message.reply_cached_media(
-                            fileid,
-                            caption=reply_text or ""
-                        )
-                    else:
-                        button = eval(btn) 
-                        await message.reply_cached_media(
-                            fileid,
-                            caption=reply_text or "",
-                            reply_markup=InlineKeyboardMarkup(button)
-                        )
-                except Exception as e:
-                    print(e)
-                break 
-
-    else:
-        if FILTER_MODE.get(str(message.chat.id)) == "False":
-            return
-        else:
-            await auto_filter(client, message)
+                    if settings['auto_ffilter']:
+                        await auto_filter(client, message)
+                except KeyError:
+                    grpid = await active_connection(str(message.from_user.id))
+                    await save_group_settings(grpid, 'auto_ffilter', True)
+                    settings = await get_settings(message.chat.id)
+                    if settings['auto_ffilter']:
+                        await auto_filter(client, message)
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pm_text(bot, message):
-    content = message.text
-    user = message.from_user.first_name
-    user_id = message.from_user.id
-    if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
-    await message.reply_text("<b>Hᴇʏ Dᴜᴅᴇ🥰,\n\nYᴏᴜ ᴄᴀɴ'ᴛ Gᴇᴛ ᴍᴏᴠɪᴇ ʜᴇʀᴇ........\nAꜱᴋ ᴍᴏᴠɪᴇ ᴏɴ ᴏᴜʀ ɢʀᴏᴜᴘ\nCʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ 𝚓ᴏɪɴ👇</b>",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ​ ", url=f"https://t.me/BugFilmsRequests")]]))
-    await bot.send_message(chat_id=ADMINS,text=f"<b>#PM_MSG\n\nName : {user}\n\nID : {user_id}\n\nMessage : {content}</b>")
-
+    await global_filters(bot, message)
+    await auto_filter(bot, message)
+    
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
