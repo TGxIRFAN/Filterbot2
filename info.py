@@ -126,7 +126,6 @@ IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", """<b>⍞ 𝗧𝗶𝘁𝗹𝗲 : <a
 
 ⌗ 𝗚𝗲𝗻𝗿𝗲𝘀 : <i>{genres}</i>
 ★ 𝗥𝗮𝘁𝗶𝗻𝗴 : <a href={url}/ratings>{rating}</a> / 10 (based on {votes} user ratings.)
-
 〄𝗖𝗼𝘂𝗻𝘁𝗿𝗶𝗲𝘀 : <i>{countries}</i>
 ⌬ 𝗟𝗮𝗻𝗴𝘂𝗮𝗴𝗲𝘀 : <i>{languages}</i>
 
