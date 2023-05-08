@@ -839,7 +839,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "updates":
         buttons = [[
-            InlineKeyboardButton('𝚂𝚄𝙿𝙿𝙾𝚁𝚃', url='https://t.mefilesharebotusers'),
+            InlineKeyboardButton('𝚂𝚄𝙿𝙿𝙾𝚁𝚃', url='https://t.me/filesharebotusers'),
             InlineKeyboardButton('𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/filesharebotusers')
             ],[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='about')
