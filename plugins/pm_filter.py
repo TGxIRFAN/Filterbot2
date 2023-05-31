@@ -58,6 +58,10 @@ async def fil_mod(client, message):
       else:
           await m.edit("𝚄𝚂𝙴 :- /autofilter on 𝙾𝚁 /autofilter off")
 
+@Client.on_message(filters.private & filters.text & filters.incoming)
+async def pm_text(bot, message):
+    await auto_filter(bot, message)
+            
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client,message):
     group_id = message.chat.id
