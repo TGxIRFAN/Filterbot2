@@ -483,11 +483,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{files.file_name}"
 
-        if query.message.chat.type == 
-        enums.ChatType.PRIVATE:
+        if query.message.chat.type == enums.ChatType.PRIVATE:
             await query.answer()
-            await
-        client.send_cached_media(
+            await client.send_cached_media(
        
         chat_id=query.from_user.id,
                 file_id=file_id,
