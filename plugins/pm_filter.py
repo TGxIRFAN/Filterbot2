@@ -483,15 +483,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{files.file_name}"
 
-        if query.message.chat.type == enums.ChatType.PRIVATE:
-    await query.answer()
-    await client.send_cached_media(
+        if query.message.chat.type == 
+        enums.ChatType.PRIVATE:
+            await query.answer()
+            await
+        client.send_cached_media(
+       
         chat_id=query.from_user.id,
-        file_id=file_id,
-        caption=f_caption,
-        protect_content=True if ident == "filep" else False,
-    )
-    return
+                file_id=file_id,
+                caption=f_caption,
+                protect_content=True if 
+        ident == "filep" else False,
+            )
+            return
             
         try:
             if REQ_CHANNEL and not await is_subscribed(client, query):
