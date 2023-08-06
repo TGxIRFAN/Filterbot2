@@ -6,7 +6,7 @@ from Script import script
 from pyrogram import Client, filters, enums
 from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from database.ia_filterdb import Media, get_file_details, unpack_new_file_id
+from database.ia_filterdb import Media, get_file_details, unpack_new_file_id, get_bad_files
 from database.users_chats_db import db
 from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, MSG_ALRT, MAIN_CHANNEL, REQ_CHANNEL
 from utils import get_settings, get_size, is_subscribed, save_group_settings, temp
@@ -526,27 +526,25 @@ async def save_template(client, message):
 
 @Client.on_message(filters.command("deletefiles") & filters.user(ADMINS))
 async def deletemultiplefiles(bot, message):
+    chat_type = message.chat.type
+    if chat_type != enums.ChatType.PRIVATE:
+        return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, Tʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡᴏɴ'ᴛ ᴡᴏʀᴋ ɪɴ ɢʀᴏᴜᴘs. Iᴛ ᴏɴʟʏ ᴡᴏʀᴋs ᴏɴ ᴍʏ PM!</b>")
+    else:
+        pass
+    try:
+        keyword = message.text.split(" ", 1)[1]
+    except:
+        return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, Gɪᴠᴇ ᴍᴇ ᴀ ᴋᴇʏᴡᴏʀᴅ ᴀʟᴏɴɢ ᴡɪᴛʜ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴅᴇʟᴇᴛᴇ ғɪʟᴇs.</b>")
     btn = [[
-            InlineKeyboardButton("PʀᴇDVD", callback_data="predvd"),
-            InlineKeyboardButton("PʀᴇDVD Rɪᴘ", callback_data="predvdrip")
-          ],[
-            InlineKeyboardButton("HDᴛs", callback_data="hdts"),
-            InlineKeyboardButton("HD-ᴛs", callback_data="hdtss")
-          ],[
-            InlineKeyboardButton("HDCᴀᴍ", callback_data="hdcam"),
-            InlineKeyboardButton("HD-Cᴀᴍ", callback_data="hdcams")
-          ],[
-            InlineKeyboardButton("CᴀᴍRɪᴘ", callback_data="camrip"),
-            InlineKeyboardButton("S-Pʀɪɴᴛ", callback_data="sprint")
-          ],[
-            InlineKeyboardButton("Cᴀɴᴄᴇʟ", callback_data="close_data")
-          ]]
+       InlineKeyboardButton("Yᴇs, Cᴏɴᴛɪɴᴜᴇ !", callback_data=f"killfilesdq#{keyword}")
+       ],[
+       InlineKeyboardButton("Nᴏ, Aʙᴏʀᴛ ᴏᴘᴇʀᴀᴛɪᴏɴ !", callback_data="close_data")
+    ]]
     await message.reply_text(
-        text="<b>Sᴇʟᴇᴄᴛ Tʜᴇ Tʏᴘᴇ Oғ Fɪʟᴇs Yᴏᴜ Wᴀɴᴛ Tᴏ Dᴇʟᴇᴛᴇ..?</b>",
+        text="<b>Aʀᴇ ʏᴏᴜ sᴜʀᴇ? Dᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ?\n\nNᴏᴛᴇ:- Tʜɪs ᴄᴏᴜʟᴅ ʙᴇ ᴀ ᴅᴇsᴛʀᴜᴄᴛɪᴠᴇ ᴀᴄᴛɪᴏɴ!</b>",
         reply_markup=InlineKeyboardMarkup(btn),
-        quote=True
+        parse_mode=enums.ParseMode.HTML
     )
-
 
 @Client.on_message(filters.command("send") & filters.user(ADMINS))
 async def send_msg(bot, message):
